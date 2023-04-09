@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1676022635 source:d:\tuhocsdl\main.cpp
+	<iostream>
+	<SDL.h>
+
+1680628949 source:d:\tuhocsdl\gamesdl\main.cpp
+	<bits/stdc++.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"CommonFun.h"
+	"BaseObject.h"
+	"game_map.h"
+	"Character.h"
+	"ImpTimer.h"
+
+1679853807 source:d:\tuhocsdl\gamesdl\commonfun.cpp
+
+1680771200 d:\tuhocsdl\gamesdl\commonfun.h
+	<bits/stdc++.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1679838556 d:\tuhocsdl\gamesdl\mainobject.h
+	<iostream>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+
+1679937551 source:d:\tuhocsdl\gamesdl\baseobject.cpp
+	"BaseObject.h"
+
+1680026765 d:\tuhocsdl\gamesdl\baseobject.h
+	"CommonFun.h"
+
+1680539789 source:d:\tuhocsdl\gamesdl\game_map.cpp
+	"game_map.h"
+
+1680538869 d:\tuhocsdl\gamesdl\game_map.h
+	"CommonFun.h"
+	"BaseObject.h"
+
+1680773329 d:\tuhocsdl\gamesdl\character.h
+	"CommonFun.h"
+	"BaseObject.h"
+
+1680773299 source:d:\tuhocsdl\gamesdl\character.cpp
+	"Character.h"
+
+1680541218 d:\tuhocsdl\gamesdl\imptimer.h
+
+1680541384 source:d:\tuhocsdl\gamesdl\imptimer.cpp
+	"ImpTimer.h"
+	"CommonFun.h"
+
