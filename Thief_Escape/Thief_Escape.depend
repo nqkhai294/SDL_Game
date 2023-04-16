@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1681577426 source:d:\lop_hoc_ke\thief_escape\main.cpp
+	"game.h"
+	"lib.h"
+	<time.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+
+1681574957 d:\lop_hoc_ke\thief_escape\game.h
+	"thief.h"
+	"pipe.h"
+	"land.h"
+	<string>
+	<fstream>
+	<sstream>
+
+1680957242 d:\lop_hoc_ke\thief_escape\doge.h
+	"lib.h"
+	"pipe.h"
+
+1681575867 d:\lop_hoc_ke\thief_escape\lib.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<string>
+	<vector>
+	<stdio.h>
+
+1681575867 d:\lop_hoc_ke\thief_escape\pipe.h
+	"lib.h"
+	<iostream>
+	<vector>
+
+1681111643 d:\lop_hoc_ke\thief_escape\land.h
+	"lib.h"
+	<vector>
+
+1681575920 source:d:\lop_hoc_ke\thief_escape\land.cpp
+	"land.h"
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+
+1681575867 source:d:\lop_hoc_ke\thief_escape\pipe.cpp
+	"pipe.h"
+	"stdio.h"
+
+1681577444 source:d:\lop_hoc_ke\thief_escape\game.cpp
+	"game.h"
+	"lib.h"
+	<iostream>
+
+1681380418 d:\lop_hoc_ke\thief_escape\thief.h
+	"lib.h"
+	"pipe.h"
+
+1681575867 source:d:\lop_hoc_ke\thief_escape\lib.cpp
+	"game.h"
+	<iostream>
+
+1681577260 source:d:\lop_hoc_ke\thief_escape\thief.cpp
+	"thief.h"
+	<stdio.h>
+	<iostream>
+
