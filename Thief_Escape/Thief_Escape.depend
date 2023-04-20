@@ -8,7 +8,7 @@
 	<SDL_image.h>
 	<SDL_ttf.h>
 
-1681574957 d:\lop_hoc_ke\thief_escape\game.h
+1681866410 d:\lop_hoc_ke\thief_escape\game.h
 	"thief.h"
 	"pipe.h"
 	"land.h"
@@ -20,7 +20,7 @@
 	"lib.h"
 	"pipe.h"
 
-1681575867 d:\lop_hoc_ke\thief_escape\lib.h
+1681866834 d:\lop_hoc_ke\thief_escape\lib.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -43,11 +43,11 @@
 	<iostream>
 	<stdlib.h>
 
-1681575867 source:d:\lop_hoc_ke\thief_escape\pipe.cpp
+1681917390 source:d:\lop_hoc_ke\thief_escape\pipe.cpp
 	"pipe.h"
 	"stdio.h"
 
-1681577444 source:d:\lop_hoc_ke\thief_escape\game.cpp
+1681865776 source:d:\lop_hoc_ke\thief_escape\game.cpp
 	"game.h"
 	"lib.h"
 	<iostream>
@@ -64,4 +64,15 @@
 	"thief.h"
 	<stdio.h>
 	<iostream>
+
+1681865776 source:d:\lop_hoc_ke\thief_escape\sound.cpp
+	"sound.h"
+	<stdio.h>
+	<iostream>
+	<string>
+
+1681865776 d:\lop_hoc_ke\thief_escape\sound.h
+	<SDL_mixer.h>
+	<string>
+	"lib.h"
 

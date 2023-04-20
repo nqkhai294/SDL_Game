@@ -22,7 +22,6 @@ public:
     input userInput;
     thief thief_;
     pipe pipe;
-//    sound sound;
     land land;
 public:
     game();

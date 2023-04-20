@@ -14,7 +14,7 @@ using namespace std;
 class position
 {
 public:
-    short int x, y, angle, state;
+    short int x, y, angle;
     void setPos(const short int x, const short int y);
 };
 
@@ -50,9 +50,9 @@ public:
 
     static const short int SCREEN_WIDTH = 350;
     static const short int SCREEN_HEIGHT = 625;
-    static const short int PIPE_SPACE = 160;
+    static const short int PIPE_SPACE = 170;
     static const short int TOTAL_PIPE = 4;
-    static const short int PIPE_DISTANCE = 200;
+    static const short int PIPE_DISTANCE = 230;
     static const short int LAND_HEIGHT = 140;
     static const short int THIEF_WIDTH = 50;
     static const short int THIEF_HEIGHT = 35;
