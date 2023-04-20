@@ -39,6 +39,8 @@
 		<Unit filename="lib.cpp" />
 		<Unit filename="lib.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="pile.cpp" />
+		<Unit filename="pile.h" />
 		<Unit filename="pipe.cpp" />
 		<Unit filename="pipe.h" />
 		<Unit filename="thief.cpp" />

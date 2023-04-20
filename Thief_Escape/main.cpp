@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <SDL.h>
 #include <SDL_image.h>
-//#include <SDL_ttf.h>
+
 
 const short int FPS = 60;
 const short int frameDelay = 1000 / FPS;
