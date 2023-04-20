@@ -4,7 +4,7 @@
 
 bool LTexture::quit = false;
 bool LTexture::die = true;
-short int LTexture::score = 0;
+int LTexture::score = 0;
 SDL_Window* LTexture::gWindow = NULL;
 SDL_Renderer* LTexture::gRenderer = NULL;
 SDL_Event LTexture::event;
@@ -14,12 +14,12 @@ LTexture::LTexture()
 	Texture = NULL;
 }
 
-short int LTexture::getWidth()
+int LTexture::getWidth()
 {
 	return tWidth;
 }
 
-short int LTexture::getHeight()
+int LTexture::getHeight()
 {
 	return tHeight;
 }
@@ -35,7 +35,7 @@ void LTexture::free()
 	}
 }
 
-void LTexture::Render(short int x, short int y, short int angle, SDL_Rect* clip, SDL_RendererFlip flip)
+void LTexture::Render(int x, int y, int angle, SDL_Rect* clip, SDL_RendererFlip flip)
 {
 	SDL_Rect Rec_Render = { x, y, tWidth, tHeight };
 
@@ -86,7 +86,7 @@ bool LTexture::isNULL()
     return false;
 }
 
-void position::setPos(const short int x, const short int y)
+void position::setPos(const int x, const int y)
 {
     this->x = x;
     this->y = y;

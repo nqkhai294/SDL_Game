@@ -63,7 +63,7 @@ void thief::fall()
     else return;
 }
 
-void thief::update(short int pipeWidth, short int pipeHeight)
+void thief::update(int pileWidth, int pileHeight)
 {
     if (!die)
     {
@@ -83,14 +83,14 @@ void thief::update(short int pipeWidth, short int pipeHeight)
             time++;
         }
 
-        if ( (posThief.x + THIEF_WIDTH > posPipe[ahead].x + 5) && (posThief.x + 5 < posPipe[ahead].x + pipeWidth) &&
-             (posThief.y + 5 < posPipe[ahead].y + pipeHeight || posThief.y  + THIEF_HEIGHT > posPipe[ahead].y + pipeHeight + PIPE_SPACE + 5) )
+        if ( (posThief.x + THIEF_WIDTH > posPile[ahead].x + 5) && (posThief.x + 5 < posPile[ahead].x + pileWidth) &&
+             (posThief.y + 5 < posPile[ahead].y + pileHeight || posThief.y  + THIEF_HEIGHT > posPile[ahead].y + pileHeight + PILE_SPACE + 5) )
         {
             die = true;
         }
-        else if (posThief.x > posPipe[ahead].x + pipeWidth )
+        else if (posThief.x > posPile[ahead].x + pileWidth )
         {
-            ahead = ( ahead + 1 ) % TOTAL_PIPE;
+            ahead = ( ahead + 1 ) % TOTAL_PILE;
             score++;
         }
 
@@ -100,3 +100,4 @@ void thief::update(short int pipeWidth, short int pipeHeight)
         }
     }
 }
+

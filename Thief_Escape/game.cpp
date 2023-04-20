@@ -9,18 +9,18 @@ void game::takeInput()
     {
         if (event.type == SDL_QUIT)
         {
-            userInput.Type = input::QUIT;
+            playerInput.Type = input::QUIT;
             quit = true;
             SDL_DestroyWindow( gWindow );
         }
         else if (event.type == SDL_MOUSEBUTTONDOWN || (event.type == SDL_KEYDOWN &&
 		(event.key.keysym.sym == SDLK_SPACE || event.key.keysym.sym == SDLK_UP) && event.key.repeat == 0) )
         {
-            userInput.Type = input::PLAY;
+            playerInput.Type = input::PLAY;
         }
 		else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE && event.key.repeat == 0)
 		{
-			userInput.Type = input::PAUSE;
+			playerInput.Type = input::PAUSE;
 		}
     }
 }
@@ -28,21 +28,21 @@ void game::takeInput()
 game::game()
 {
     initGraphic();
-    pipe.init();
-    land.init();
+    pile_.init();
+    land_.init();
 
 }
 
 game::~game()
 {
     thief_.Free();
-    pipe.Free();
-    land.Free();
+    pile_.Free();
+    land_.Free();
     free();
-    releaseGraphic();
+    freeGraphic();
 }
 
-void game::releaseGraphic()
+void game::freeGraphic()
 {
     SDL_DestroyWindow( gWindow );
     gWindow = NULL;
@@ -287,10 +287,10 @@ void game::renderBestScore()
 	fileOut.close();
 }
 
-void game::renderMessage()
+void game::renderReady()
 {
 	LTexture image;
-	image.Load("res/image/message.png", 1);
+	image.Load("res/image/ready.png", 1);
 	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 180);
 	image.free();
 }

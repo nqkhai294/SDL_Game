@@ -14,7 +14,7 @@ class pipe:LTexture
 {
 private:
     const short int randMin = -373 + 30; // 373 là kích thước ảnh pipe
-    const short int randMax = SCREEN_HEIGHT - LAND_HEIGHT - 373 - PIPE_DISTANCE - 30;
+    const short int randMax = SCREEN_HEIGHT - LAND_HEIGHT - 373 - PILE_DISTANCE - 30;
 public:
     bool init();
 

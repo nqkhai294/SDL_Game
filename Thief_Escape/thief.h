@@ -3,7 +3,7 @@
 #pragma once
 
 #include "lib.h"
-#include "pipe.h"
+#include "pile.h"
 
 using namespace std;
 
@@ -23,10 +23,10 @@ public:
 
     void fall();
 
-    void update(short int pipeWidth, short int pipeHeight);
+    void update(int pileWidth, int pileHeight);
 private:
-    short int angle, time, y0;
-    short int ahead = 0;
+    int angle, time, y0;
+    int ahead = 0;
     string saved_path = "";
     position posThief;
 };

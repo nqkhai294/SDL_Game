@@ -1,5 +1,5 @@
 
-#include "pipe.h"
+/*#include "pipe.h"
 #include "stdio.h"
 
 vector<position> posPipe;
@@ -7,7 +7,7 @@ vector<position> posPipe;
 bool pipe::init()
 {
     posPipe.clear();
-    for (signed char i = 0; i < TOTAL_PIPE; i++)
+    for (signed char i = 0; i < TOTAL_PILE; i++)
     {
         position temp;
         temp.setPos(SCREEN_WIDTH + i * PIPE_DISTANCE + 350, (rand() % (randMax - randMin + 1)) + randMin);
@@ -57,5 +57,5 @@ void pipe::update()
             }
         }
     }
-}
+}*/
 

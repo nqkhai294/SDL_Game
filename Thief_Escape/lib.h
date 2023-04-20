@@ -14,8 +14,8 @@ using namespace std;
 class position
 {
 public:
-    short int x, y, angle;
-    void setPos(const short int x, const short int y);
+    int x, y, angle;
+    void setPos(const int x, const int y);
 };
 
 class LTexture
@@ -29,16 +29,16 @@ public:
 
     bool Load(string path, double scale = 1);
 
-    short int getWidth();
-    short int getHeight();
+    int getWidth();
+    int getHeight();
 
     void free();
-    void Render(short int x, short int y, short int angle = 0, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
+    void Render(int x, int y, int angle = 0, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
 public:
     SDL_Texture* Texture;
 
-    short int tWidth;
-    short int tHeight;
+    int tWidth;
+    int tHeight;
 
 public:
     static SDL_Window* gWindow;
@@ -46,14 +46,14 @@ public:
     static SDL_Event event;
     static bool quit;
     static bool die;
-    static short int score;
+    static int score;
 
-    static const short int SCREEN_WIDTH = 350;
-    static const short int SCREEN_HEIGHT = 625;
-    static const short int PIPE_SPACE = 170;
-    static const short int TOTAL_PIPE = 4;
-    static const short int PIPE_DISTANCE = 230;
-    static const short int LAND_HEIGHT = 140;
-    static const short int THIEF_WIDTH = 50;
-    static const short int THIEF_HEIGHT = 35;
+    static const int SCREEN_WIDTH = 350;
+    static const int SCREEN_HEIGHT = 625;
+    static const int PILE_SPACE = 160;
+    static const int TOTAL_PILE = 4;
+    static const int PILE_DISTANCE = 220;
+    static const int LAND_HEIGHT = 140;
+    static const int THIEF_WIDTH = 50;
+    static const int THIEF_HEIGHT = 35;
 };

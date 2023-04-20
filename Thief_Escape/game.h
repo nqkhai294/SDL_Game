@@ -3,7 +3,7 @@
 #pragma once
 
 #include "thief.h"
-#include "pipe.h"
+#include "pile.h"
 #include "land.h"
 #include <string>
 #include <fstream>
@@ -19,10 +19,10 @@ public:
         enum type { QUIT, PLAY, NONE, PAUSE};
         type Type;
     };
-    input userInput;
+    input playerInput;
     thief thief_;
-    pipe pipe;
-    land land;
+    pile pile_;
+    land land_;
 public:
     game();
 
@@ -40,21 +40,21 @@ public:
         return die;
     }
 
-    int getPipeWidth()
+    int getPileWidth()
     {
-        return pipe.width();
+        return pile_.width();
     }
 
-    int getPipeHeight()
+    int getPileHeight()
     {
-        return pipe.height();
+        return pile_.height();
     }
 
     void takeInput();
 
     void display();
 
-    void releaseGraphic();
+    void freeGraphic();
 
     void renderScoreSmall();
 
@@ -62,7 +62,7 @@ public:
 
     void renderBestScore();
 
-    void renderMessage();
+    void renderReady();
 
     void renderBackground();
 
@@ -86,5 +86,5 @@ public:
 
 private:
     const double scaleNumberS = 0.75;
-    short int bestScore;
+    int bestScore;
 };

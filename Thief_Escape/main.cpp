@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL_ttf.h>
+//#include <SDL_ttf.h>
 
 const short int FPS = 60;
 const short int frameDelay = 1000 / FPS;
@@ -13,114 +13,114 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    Uint32 frameStart;
+    int frameStart;
     short int frameTime;
-    game g;
+    game game_;
     bool isMenu = 0;
     bool isPause = 0;
 
-    while(!g.isQuit())
+    while(!game_.isQuit())
     {
         frameStart = SDL_GetTicks();
 
-        if (g.isDie())
+        if (game_.isDie())
         {
-            if (isMenu) {
-                g.thief_.render();
+            if (isMenu) {           //?
+                game_.thief_.render();
             }
-            g.userInput.Type = game::input::NONE;
-            while(g.isDie())
+            game_.playerInput.Type = game::input::NONE;
+            while(game_.isDie())
             {
-                g.takeInput();
-                if (isMenu == 1 && g.userInput.Type == game::input::PLAY)
+                game_.takeInput();
+                if (isMenu == 1 && game_.playerInput.Type == game::input::PLAY)
                 {
-                    if (g.checkReplay())
+                    if (game_.checkReplay())
                     {
                         isMenu = 0;
                     }
-                    g.userInput.Type = game::input::NONE;
+                    game_.playerInput.Type = game::input::NONE;
                 }
-                g.renderBackground();
+                game_.renderBackground();
 
-                g.pipe.render();
-                g.land.render();
+                game_.pile_.render();
+                game_.land_.render();
                 if (isMenu)
                 {
-                    g.thief_.render();
-                    g.thief_.fall();
-                    g.renderGameOver();
-                    g.renderScoreSmall();
-                    g.renderBestScore();
-                    g.replay();
+                    game_.thief_.render();
+                    game_.thief_.fall();
+                    game_.renderGameOver();
+                    game_.renderScoreSmall();
+                    game_.renderBestScore();
+                    game_.replay();
                 }
                 else
                 {
-                    g.pipe.init();
-                    g.thief_.init();
-                    g.thief_.render();
-                    g.renderMessage();
-                    if (g.userInput.Type == game::input::PLAY)
+                    game_.pile_.init();
+                    game_.thief_.init();
+                    game_.thief_.render();
+                    game_.renderReady();
+                    if (game_.playerInput.Type == game::input::PLAY)
                     {
-                        g.Restart();
+                        game_.Restart();
                         isMenu = 1;
-                        g.userInput.Type = game::input::NONE;
+                        game_.playerInput.Type = game::input::NONE;
                     }
-                    g.land.update();
+                    game_.land_.update();
                 }
-                g.display();
+                game_.display();
             }
-            g.pipe.init();
+            game_.pile_.init();
         }
         else
         {
-            g.takeInput();
+            game_.takeInput();
 
-            if (g.userInput.Type == game::input::PAUSE)
+            if (game_.playerInput.Type == game::input::PAUSE)
             {
                 isPause = abs(1 - isPause);
-                g.userInput.Type = game::input::NONE;
+                game_.playerInput.Type = game::input::NONE;
             }
 
-            if (isPause == 0 && g.userInput.Type == game::input::PLAY)
+            if (isPause == 0 && game_.playerInput.Type == game::input::PLAY)
             {
 //
-                g.thief_.resetTime();
-                g.userInput.Type = game::input::NONE;
+                game_.thief_.resetTime();
+                game_.playerInput.Type = game::input::NONE;
             }
 
-            g.renderBackground();
-            g.pipe.render();
-            g.land.render();
-            g.thief_.render();
-            g.renderScoreLarge();
+            game_.renderBackground();
+            game_.pile_.render();
+            game_.land_.render();
+            game_.thief_.render();
+            game_.renderScoreLarge();
 
             if (!isPause)
             {
-                g.thief_.update(g.getPipeWidth(), g.getPipeHeight());
-                g.pipe.update();
-                g.land.update();
-                g.pause();
+                game_.thief_.update(game_.getPileWidth(), game_.getPileHeight());
+                game_.pile_.update();
+                game_.land_.update();
+                game_.pause();
             }
             else
             {
-                g.resume();
-                g.renderPauseTab();
-                g.renderScoreSmall();
-                g.renderBestScore();
-                g.replay();
+                game_.resume();
+                game_.renderPauseTab();
+                game_.renderScoreSmall();
+                game_.renderBestScore();
+                game_.replay();
 
-                g.Theme();
-                if (g.userInput.Type == game::input::PLAY)
+                game_.Theme();
+                if (game_.playerInput.Type == game::input::PLAY)
                 {
-                    if (g.checkReplay())
+                    if (game_.checkReplay())
                     {
                         isPause = 0;
                     }
 
-                    g.userInput.Type = game::input::NONE;
+                    game_.playerInput.Type = game::input::NONE;
                 }
             }
-            g.display();
+            game_.display();
         }
 
         //Limit FPS
