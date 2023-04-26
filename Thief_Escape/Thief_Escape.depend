@@ -1,12 +1,11 @@
 # depslib dependency file v1.0
-1682006556 source:d:\lop_hoc_ke\thief_escape\main.cpp
+1682011639 source:d:\lop_hoc_ke\thief_escape\main.cpp
 	"game.h"
 	"lib.h"
 	<time.h>
 	<stdlib.h>
 	<SDL.h>
 	<SDL_image.h>
-	<SDL_ttf.h>
 
 1682006699 d:\lop_hoc_ke\thief_escape\game.h
 	"thief.h"
