@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1682011639 source:d:\lop_hoc_ke\thief_escape\main.cpp
+1682587039 source:d:\lop_hoc_ke\thief_escape\main.cpp
 	"game.h"
 	"lib.h"
 	<time.h>
@@ -7,7 +7,7 @@
 	<SDL.h>
 	<SDL_image.h>
 
-1682006699 d:\lop_hoc_ke\thief_escape\game.h
+1682581462 d:\lop_hoc_ke\thief_escape\game.h
 	"thief.h"
 	"pile.h"
 	"land.h"
@@ -45,7 +45,7 @@
 1682005339 source:d:\lop_hoc_ke\thief_escape\pipe.cpp
 	"stdio.h"
 
-1682006437 source:d:\lop_hoc_ke\thief_escape\game.cpp
+1682581462 source:d:\lop_hoc_ke\thief_escape\game.cpp
 	"game.h"
 	"lib.h"
 	<iostream>
@@ -58,7 +58,7 @@
 	"game.h"
 	<iostream>
 
-1682006089 source:d:\lop_hoc_ke\thief_escape\thief.cpp
+1682580113 source:d:\lop_hoc_ke\thief_escape\thief.cpp
 	"thief.h"
 	<stdio.h>
 	<iostream>

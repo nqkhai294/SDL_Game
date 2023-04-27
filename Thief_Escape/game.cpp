@@ -337,14 +337,6 @@ void game::renderPauseTab()
 	image.free();
 }
 
-void game::Theme()
-{
-	LTexture image;
-	image.Load("res/image/thief.png", 0.8);
-	image.Render(105, 315);
-	image.free();
-}
-
 
 
 void game::renderGameOver()
@@ -382,3 +374,10 @@ void game::Restart()
     thief_.resetTime();
 }
 
+void game::renderGuide()
+{
+    LTexture image;
+	image.Load("res/image/guide.png", 1);
+	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 380);
+	image.free();
+}

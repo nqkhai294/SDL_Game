@@ -74,8 +74,6 @@ public:
 
     void renderPauseTab();
 
-    void Theme();
-
     void renderGameOver();
 
     void replay();
@@ -83,6 +81,8 @@ public:
     bool checkReplay();
 
     void Restart();
+
+    void renderGuide();
 
 private:
     const double scaleNumberS = 0.75;

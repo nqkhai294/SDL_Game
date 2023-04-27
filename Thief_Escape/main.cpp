@@ -25,9 +25,9 @@ int main(int argc, char** argv)
 
         if (game_.isDie())
         {
-            if (isMenu) {           //?
+           /* if (isMenu) {           //?
                 game_.thief_.render();
-            }
+            }*/
             game_.playerInput.Type = game::input::NONE;
             while(game_.isDie())
             {
@@ -41,7 +41,6 @@ int main(int argc, char** argv)
                     game_.playerInput.Type = game::input::NONE;
                 }
                 game_.renderBackground();
-
                 game_.pile_.render();
                 game_.land_.render();
                 if (isMenu)
@@ -59,6 +58,7 @@ int main(int argc, char** argv)
                     game_.thief_.init();
                     game_.thief_.render();
                     game_.renderReady();
+                    game_.renderGuide();
                     if (game_.playerInput.Type == game::input::PLAY)
                     {
                         game_.Restart();
@@ -77,13 +77,12 @@ int main(int argc, char** argv)
 
             if (game_.playerInput.Type == game::input::PAUSE)
             {
-                isPause = abs(1 - isPause);
+                isPause = 1 - isPause;
                 game_.playerInput.Type = game::input::NONE;
             }
 
             if (isPause == 0 && game_.playerInput.Type == game::input::PLAY)
             {
-//
                 game_.thief_.resetTime();
                 game_.playerInput.Type = game::input::NONE;
             }
@@ -109,7 +108,6 @@ int main(int argc, char** argv)
                 game_.renderBestScore();
                 game_.replay();
 
-                game_.Theme();
                 if (game_.playerInput.Type == game::input::PLAY)
                 {
                     if (game_.checkReplay())
